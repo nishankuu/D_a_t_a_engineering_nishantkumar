@@ -1,0 +1,4 @@
+First Error in Athena -
+
+HIVE_CURSOR_ERROR: Row is not a valid JSON Object - JSONException: A JSONObject text must end with '}' at 2 [character 3 line 1]
+This query ran against the ‘’ database, unless qualified by the query. Please post the error message on our forum  or contact customer support  with Query ID: d4d1467b-2c09-4c3f-81a7-e08c5462ae0a
