@@ -84,13 +84,13 @@ After  above steps we get clean JSON and we successfully transformed [item] - ar
 # 5. Processing CSV Data with AWS Glue
 Similar to JSON, we crawl CSV files and create a partitioned table in the Glue catalog.
 Files are stored in S3, organized by regions.
-The Glue crawler ensures each region's data is partitioned correctly.
-
+The schema of the CSV files in the Glue database, after crawling the data files from the raw data bucket, is as follows:
+![Image](https://github.com/user-attachments/assets/fc13f2bf-8c52-4d9d-ad89-22207fb9d341)
 
 # 6. Data Type Optimization in Athena
-When joining JSON and CSV datasets in Athena, we encountered data type mismatches (e.g., string IDs in JSON).
+When joining (Different data attributes are in different tables) JSON and CSV datasets in Athena, we encountered data type mismatches (e.g., string IDs in JSON).
 
-To avoid casting costs, we modify the schema at the pre-processing stage in Lambda.
+We can change this in query by using cast function. However, to avoid casting costs, we modify the schema at the pre-processing stage in Lambda.
 Once updated, we re-run Lambda for seamless data type conversion.
 
 # 7. Storing Cleaned Data in S3 with Parquet Format
@@ -106,7 +106,7 @@ Coalesce function to reduce clusters
 The processed data from clean data bucket after running through glue is moved to a new S3 bucket for analytical workloads.
 Access is granted to data analysts and data scientists for querying and insights.
 
-## Glue Job saving clean data from Glue Catalog in S3 Analyticsl bucket
+## Glue Job saving clean data from Glue Catalog in S3 Analytical bucket
 ![Image](https://github.com/user-attachments/assets/3c55e333-da74-4a90-91a1-549d6c7032f2)
 
 # 9. Data Visualization with AWS Quicksight
