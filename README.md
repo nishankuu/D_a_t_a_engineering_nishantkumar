@@ -16,6 +16,25 @@ Link Included for download - https://www.kaggle.com/datasets/datasnaek/youtube-n
 
 # YouTube Trending Videos Data Pipeline
 
+o begin, I used the AWS CLI to transfer data to S3 buckets, organizing the files into separate folders for JSON and CSV data.
+
+Data Upload Using AWS CLI
+
+JSON Files: Stored in the raw_statistics_reference_data folder.
+aws s3 cp . s3://nishant-dataengineering-youtube/youtube/raw_statistics_reference_data/ --recursive --exclude "*" --include "*.json"
+
+CSV Files: Organized by region within the raw_statistics folder.
+aws s3 cp FRvideos.csv s3://nishant-dataengineering-youtube/youtube/raw_statistics/region=fr/
+aws s3 cp GBvideos.csv s3://nishant-dataengineering-youtube/youtube/raw_statistics/region=gb/
+aws s3 cp INvideos.csv s3://nishant-dataengineering-youtube/youtube/raw_statistics/region=in/
+aws s3 cp JPvideos.csv s3://nishant-dataengineering-youtube/youtube/raw_statistics/region=jp/
+aws s3 cp KRvideos.csv s3://nishant-dataengineering-youtube/youtube/raw_statistics/region=kr/
+aws s3 cp MXvideos.csv s3://nishant-dataengineering-youtube/youtube/raw_statistics/region=mx/
+aws s3 cp RUvideos.csv s3://nishant-dataengineering-youtube/youtube/raw_statistics/region=ru/
+aws s3 cp USvideos.csv s3://nishant-dataengineering-youtube/youtube/raw_statistics/region=us/
+This structured data storage ensures easy access and efficient processing in subsequent steps of the project.
+
+
 # Project Overview
 
 This project focuses on building a data pipeline for analyzing YouTube's trending videos dataset using AWS Glue, Athena, and Quicksight. The dataset is processed in multiple stages, from raw JSON extraction to a structured and optimized format for querying and visualization.
