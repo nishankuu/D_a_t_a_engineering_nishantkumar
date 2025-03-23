@@ -1,0 +1,17 @@
+Used CLI to upload file in bucket instead of using AWS console.
+
+CLI commands used to upload files in S3 bucket –
+
+For JSON files…
+
+aws s3 cp . s3:// nishant-dataengineering-youtube/youtube/raw_statistics_reference_data/ --recursive --exclude "*" --include "*.json"
+
+For CSV files –
+aws s3 cp FRvideos.csv s3://nishant-dataengineering-youtube/youtube/raw_statistics/region=fr/
+aws s3 cp GBvideos.csv s3://nishant-dataengineering-youtube/youtube/raw_statistics/region=gb/
+aws s3 cp INvideos.csv s3://nishant-dataengineering-youtube/youtube/raw_statistics/region=in/
+aws s3 cp JPvideos.csv s3://nishant-dataengineering-youtube/youtube/raw_statistics/region=jp/
+aws s3 cp KRvideos.csv s3://nishant-dataengineering-youtube/youtube/raw_statistics/region=kr/
+aws s3 cp MXvideos.csv s3://nishant-dataengineering-youtube/youtube/raw_statistics/region=mx/
+aws s3 cp RUvideos.csv s3://nishant-dataengineering-youtube/youtube/raw_statistics/region=ru/
+aws s3 cp USvideos.csv s3://nishant-dataengineering-youtube/youtube/raw_statistics/region=us/
