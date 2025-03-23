@@ -9,4 +9,5 @@ The data was collected using the YouTube API and has been structurally improved 
 Source - Kaggle (One Example File Uploaded)
 Link Included for download - https://www.kaggle.com/datasets/datasnaek/youtube-new
 
-
+# Data Architecture/Flow
+<img width="1012" alt="Image" src="https://github.com/user-attachments/assets/0045bd69-60e4-47ac-84ec-6a20d576e32c" />
