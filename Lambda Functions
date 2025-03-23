@@ -44,8 +44,8 @@ Test JSON -
 
 By below code we are creating a file in S3 bucket and also a table in Glue Catalog.
 From the File generated in Glue Catalog using code, we can query data in Athena which is now structured. Array attributed now in readable format.
-------------------------
-Python Put Event
+----------------------------
+Lambda Code ---
 
 import awswrangler as wr
 import pandas as pd
