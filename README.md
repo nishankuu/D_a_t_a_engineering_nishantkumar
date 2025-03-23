@@ -32,6 +32,7 @@ aws s3 cp KRvideos.csv s3://nishant-dataengineering-youtube/youtube/raw_statisti
 aws s3 cp MXvideos.csv s3://nishant-dataengineering-youtube/youtube/raw_statistics/region=mx/
 aws s3 cp RUvideos.csv s3://nishant-dataengineering-youtube/youtube/raw_statistics/region=ru/
 aws s3 cp USvideos.csv s3://nishant-dataengineering-youtube/youtube/raw_statistics/region=us/
+
 This structured data storage ensures easy access and efficient processing in subsequent steps of the project.
 
 
