@@ -1,3 +1,5 @@
+This process is done so that we can query and query data in Athena which was previously throwing error when we have array in JSON.
+
 Test JSON -
 
 {
